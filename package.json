@@ -21,7 +21,9 @@
     "start": "node index",
     "dev": "DEBUG=ghost:* grunt dev",
     "test": "grunt validate --verbose",
-    "init": "yarn global add knex-migrator ember-cli grunt-cli && yarn install && grunt symlink && grunt init || true"
+    "init": "yarn global add knex-migrator ember-cli grunt-cli && yarn install && grunt symlink && grunt init || true",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "engines": {
     "node": "^4.5.0 || ^6.9.0"
@@ -60,7 +62,7 @@
     "jsdom": "9.12.0",
     "jsonpath": "0.2.12",
     "knex": "0.12.9",
-    "knex-migrator": "2.1.5",
+    "knex-migrator": "3.1.5",
     "lodash": "4.17.4",
     "markdown-it": "8.3.2",
     "markdown-it-footnote": "3.0.1",
@@ -90,7 +92,8 @@
     "unidecode": "0.1.8",
     "uuid": "3.1.0",
     "validator": "6.3.0",
-    "xml": "1.0.1"
+    "xml": "1.0.1",
+    "snyk": "^1.83.0"
   },
   "optionalDependencies": {
     "sqlite3": "3.1.8"
@@ -153,5 +156,6 @@
       "grunt-update-submodules",
       "sinon"
     ]
-  }
+  },
+  "snyk": true
 }
